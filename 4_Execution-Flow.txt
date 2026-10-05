@@ -1,0 +1,19 @@
+User Query
+      │
+      ▼
+Supervisor Agent
+      │
+      ├── Reader Agent
+      │
+      ├── Writer Agent
+      │
+      └── Medical Agent
+               │
+               ▼
+        WHO/WebMD Retrieval
+               │
+               ▼
+       HuggingFace/OpenAI LLM
+               │
+               ▼
+          Final Response

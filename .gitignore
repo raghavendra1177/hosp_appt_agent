@@ -1,0 +1,30 @@
+# Environment variables / API keys
+.env
+
+# Virtual environment
+.hospenv/
+venv/
+env/
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Streamlit
+.streamlit/
+
+# IDE / editor files
+.vscode/
+.idea/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Dataset - download separately from Kaggle
+
+
+#unwanted files
+app1.py
+demo.ipynb
+progress.txt

@@ -1,0 +1,44 @@
+streamlit==1.46.1
+langgraph==0.6.6
+langchain==0.3.27
+langchain-community==0.3.29
+langchain-core==0.3.76
+huggingface-hub==0.35.3
+sentence-transformers==5.1.1
+chromadb==1.0.20
+duckduckgo-search==8.1.1
+pandas==2.3.2
+numpy==2.3.3
+python-dotenv==1.1.1
+pydantic==2.11.9
+
+
+
+# Create an isolated environment in this notebook's own folder, activate it,
+# install, then pick it as your VS Code interpreter and notebook kernel.
+#
+#   python -m venv .venv
+#
+# Activate it. The command differs by shell, so use the one that matches yours:
+#
+#   Windows PowerShell:
+#     .venv\Scripts\Activate.ps1
+#
+#   Windows Bash / Git Bash:
+#     source .venv/Scripts/activate
+#
+#   Mac / Linux Bash:
+#     source .venv/bin/activate
+#
+# Note the difference: on Windows the folder is Scripts/, on Mac and Linux it
+# is bin/. That single letter trips up more people than anything else here.
+#
+# Then:
+#   pip install --upgrade pip setuptools wheel
+#   pip install -r requirements.txt
+#
+# In VS Code: Ctrl+Shift+P > "Python: Select Interpreter" > pick .venv, then
+# open the notebook and select the same environment as the kernel.
+
+
+#to run the streamlit app - streamlit run app.py

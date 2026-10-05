@@ -1,0 +1,98 @@
+hospital_booking_system/
+│
+├── app.py
+│
+├── .env
+├── .gitignore
+├── requirements.txt
+├── README.md
+│
+├── config/
+│   ├── __init__.py
+│   └── settings.py
+│
+├── data/
+│   ├── appointments.csv
+│   ├── patients.csv
+│   └── slots.csv
+│
+├── services/
+│   ├── __init__.py
+│   ├── hf_llm.py
+│   ├── embeddings.py
+│   ├── vector_store.py
+│   └── retriever.py
+│
+├── agents/
+│   ├── __init__.py
+│   ├── supervisor_agent.py
+│   ├── reader_agent.py
+│   ├── writer_agent.py
+│   ├── medical_agent.py
+│   └── tool_registry.py
+│
+├── tools/
+│   ├── __init__.py
+│   ├── patient_tools.py
+│   ├── appointment_tools.py
+│   ├── slot_tools.py
+│   ├── writer_tools.py
+│   └── medical_tools.py
+│
+├── workflows/
+│   ├── __init__.py
+│   ├── state.py
+│   ├── router.py
+│   ├── hospital_graph.py
+│   │
+│   └── nodes/
+│       ├── __init__.py
+│       ├── supervisor_node.py
+│       ├── reader_node.py
+│       ├── writer_node.py
+│       └── medical_node.py
+
+The Agentic Hospital Appointment Booking and Medical Information System is an AI-powered healthcare application designed to provide hospital services through a conversational interface. Built using Python, Streamlit, LangGraph, and OpenAI, the system uses a multi-agent architecture to understand user requests and route them to specialized agents.
+
+A Supervisor Agent identifies the user’s intent and directs requests to Reader, Writer, or Medical agents. The Reader Agent retrieves information such as doctors, patient details, appointments, and available slots. The Writer Agent handles operations such as booking, cancelling, and rescheduling appointments. The Medical Agent processes general health-related questions and uses information retrieval with an OpenAI model to generate clear responses.
+
+LangGraph manages the workflow and shared application state, while Streamlit provides an interactive chat interface. The modular architecture separates data retrieval, transactional operations, and AI-based medical assistance, making the solution scalable and easier to maintain and extend.
+
+User Query
+      │
+      ▼
+Supervisor Agent
+      │
+      ├── Reader Agent
+      │
+      ├── Writer Agent
+      │
+      └── Medical Agent
+               │
+               ▼
+        WHO/WebMD Retrieval
+               │
+               ▼
+       HuggingFace/OpenAI LLM
+               │
+               ▼
+          Final Response
+
+
+Supervisor Agent
+
+Reader Agent
+  ├─ get_Availability
+  ├─ get_PatientAppointments
+  ├─ check_SlotAvailability
+  ├─ get_PatientDetails
+
+Writer Agent
+  ├─ book_Appointment
+  ├─ cancel_Appointment
+  └─ reschedule_Appointment
+
+Medical RAG Agent
+  ├─ WHO Search
+  ├─ WebMD Search
+  └─ Knowledge Grounded Answers

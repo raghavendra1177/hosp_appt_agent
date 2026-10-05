@@ -1,0 +1,17 @@
+Supervisor Agent
+
+Reader Agent
+  ├─ get_Availability
+  ├─ get_PatientAppointments
+  ├─ check_SlotAvailability
+  ├─ get_PatientDetails
+
+Writer Agent
+  ├─ book_Appointment
+  ├─ cancel_Appointment
+  └─ reschedule_Appointment
+
+Medical RAG Agent
+  ├─ WHO Search
+  ├─ WebMD Search
+  └─ Knowledge Grounded Answers
